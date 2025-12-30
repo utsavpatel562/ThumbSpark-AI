@@ -10,7 +10,7 @@ body {
 }
 
 body::selection {
-    @apply bg-pink-600 text-white;
+    @apply bg-orange-500 text-white;
 }
 
 button {
