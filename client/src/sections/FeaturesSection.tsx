@@ -10,8 +10,8 @@ export default function FeaturesSection() {
     <div id="features" className="px-4 md:px-16 lg:px-24 xl:px-32">
       <SectionTitle
         text1="Features"
-        text2="What you get"
-        text3="Components, patterns and pages — everything you need to ship."
+        text2="Why use our Thumbspark-AI ?"
+        text3="Design high-impact thumbnails in seconds, no hassle, no experience needed."
       />
       <div className="flex flex-wrap items-center justify-center gap-6 md:gap-4 mt-16 px-6">
         {featuresData.map((feature: IFeature, index: number) => (

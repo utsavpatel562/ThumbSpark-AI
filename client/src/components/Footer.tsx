@@ -19,13 +19,12 @@ export default function Footer() {
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
       >
-        <a href="https://prebuiltui.com?utm_source=pixels">
+        <a href="#">
           <img
-            className="size-8 aspect-square"
-            src="/assets/footer-logo.svg"
+            className=""
+            src="/assets/logo.png"
             alt="footer logo"
-            width={32}
-            height={32}
+            width={140}
           />
         </a>
         {footerData.map((section, index) => (
@@ -54,7 +53,7 @@ export default function Footer() {
         transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
       >
         <p className="max-w-60">
-          Making every customer feel valued—no matter the size of your audience.
+          Making every customer feel valued no matter the size of your audience.
         </p>
         <div className="flex items-center gap-4 mt-3">
           <a
@@ -84,7 +83,7 @@ export default function Footer() {
         </div>
         <p className="mt-3 text-center">
           &copy; {new Date().getFullYear()}{" "}
-          <a href="https://prebuiltui.com?utm_source=pixels">PrebuiltUI</a>
+          <a href="https://prebuiltui.com?utm_source=pixels">Thumbspark-ai</a>
         </p>
       </motion.div>
     </footer>

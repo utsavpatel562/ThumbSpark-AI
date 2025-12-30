@@ -5,9 +5,9 @@ import { motion } from "motion/react";
 
 export default function HeroSection() {
   const specialFeatures = [
-    "No credit card",
-    "30 days free trial",
-    "Setup in 10 minutes",
+    "Design-free workflow",
+    "Instant generation",
+    "Click-optimized templates",
   ];
 
   return (
@@ -31,7 +31,7 @@ export default function HeroSection() {
           NEW
         </span>
         <p className="flex items-center gap-1">
-          <span>Try 30 days free trial option </span>
+          <span>Generate your first thumbnail for free</span>
           <ChevronRightIcon
             size={16}
             className="group-hover:translate-x-0.5 transition duration-300"
@@ -45,9 +45,9 @@ export default function HeroSection() {
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 240, damping: 70, mass: 1 }}
       >
-        Free template to start your{" "}
+        Instant Thumbnails for Videos by{" "}
         <span className="move-gradient px-3 rounded-xl text-nowrap">
-          Next.js site.
+          Gen AI
         </span>
       </motion.h1>
       <motion.p
@@ -63,8 +63,8 @@ export default function HeroSection() {
           mass: 1,
         }}
       >
-        No complexity. No noise. Just clean, reliable automation to boost your
-        team’s efficiency.
+        Save time on design and generate click-worthy thumbnails instantly using
+        advanced AI.
       </motion.p>
       <motion.div
         className="flex items-center gap-4 mt-8"
