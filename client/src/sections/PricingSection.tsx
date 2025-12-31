@@ -11,7 +11,7 @@ export default function PricingSection() {
       <SectionTitle
         text1="Pricing"
         text2="Our Pricing Plans"
-        text3="Flexible pricing options designed to meet your needs — whether you're just getting started or scaling up."
+        text3="Choose the plan that fits your creation schedule. Cancel anytime."
       />
 
       <div className="flex flex-wrap items-center justify-center gap-8 mt-20">

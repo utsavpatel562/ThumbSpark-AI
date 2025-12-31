@@ -8,8 +8,8 @@ export default function ContactSection() {
     <div className="px-4 md:px-16 lg:px-24 xl:px-32">
       <SectionTitle
         text1="Contact"
-        text2="Reach out to us"
-        text3="Ready to grow your brand? Let’s connect and build something exceptional together."
+        text2="Ready to grow your channel?"
+        text3="Turn questions into growth. Let’s build thumbnails that convert."
       />
       <form
         onSubmit={(e) => e.preventDefault()}
