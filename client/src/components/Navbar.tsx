@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        className="fixed top-0 z-50 flex items-center justify-between w-full py-4 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur"
+        className="fixed top-0 z-50 flex items-center justify-between w-full py-4 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur-md"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -32,7 +32,7 @@ export default function Navbar() {
             <NavLink
               key={link.name}
               to={link.href}
-              className="hover:text-orange-400 transition hover:font-semibold"
+              className="transition hover:font-semibold"
             >
               {link.name}
             </NavLink>

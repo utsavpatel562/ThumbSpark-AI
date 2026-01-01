@@ -1,45 +1,50 @@
 import type { IPricing } from "../types";
 
 export const pricingData: IPricing[] = [
-    {
-        name: "Basic",
-        price: 29,
-        period: "month",
-        features: [
-            "Access to all basic courses",
-            "Community support",
-            "10 practice projects",
-            "Course completion certificate",
-            "Basic code review"
-        ],
-        mostPopular: false
-    },
-    {
-        name: "Pro",
-        price: 79,
-        period: "month",
-        features: [
-            "Access to all Pro courses",
-            "Priority community support",
-            "30 practice projects",
-            "Course completion certificate",
-            "Advance code review",
-            "1-on-1 mentoring sessions",
-            "Job assistance"
-        ],
-        mostPopular: true
-    },
-    {
-        name: "Enterprise",
-        price: 199,
-        period: "month",
-        features: [
-            "Access to all courses",
-            "Dedicated support",
-            "Unlimited projects",
-            "Course completion certificate",
-            "Premium code review"
-        ],
-        mostPopular: false
-    }
+  {
+    name: "Starter",
+    price: 29,
+    period: "one-time",
+    features: [
+      "500 credits included",
+      "50 AI-generated thumbnails",
+      "Access to Gemini AI models",
+      "No watermark on downloads",
+      "High-resolution exports",
+      "Commercial usage rights",
+      "Credits never expire"
+    ],
+    mostPopular: false
+  },
+  {
+    name: "Pro",
+    price: 79,
+    period: "one-time",
+    features: [
+      "2400 credits included",
+      "240 AI-generated thumbnails",
+      "Access to Gemini AI models",
+      "No watermark on downloads",
+      "High-resolution exports",
+      "Commercial usage rights",
+      "Faster generation speed",
+      "Credits never expire"
+    ],
+    mostPopular: true
+  },
+  {
+    name: "Ultra",
+    price: 199,
+    period: "one-time",
+    features: [
+      "8000 credits included",
+      "800 AI-generated thumbnails",
+      "Access to Gemini AI models",
+      "No watermark on downloads",
+      "Ultra high-resolution exports",
+      "Commercial usage rights",
+      "Credits never expire"
+    ],
+    mostPopular: false
+  }
 ];

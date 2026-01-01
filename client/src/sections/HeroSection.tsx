@@ -79,11 +79,11 @@ export default function HeroSection() {
 
             <motion.div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
               <button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-7 h-11 w-full sm:w-auto">
-                Get started
+                Generate now
               </button>
               <button className="flex items-center gap-2 border border-orange-900 hover:bg-orange-950 rounded-full px-6 h-11 w-full sm:w-auto justify-center">
                 <VideoIcon strokeWidth={1} />
-                <span>Watch demo</span>
+                <span>See how it works</span>
               </button>
             </motion.div>
 
