@@ -77,7 +77,7 @@ function BentoSection() {
               <div className="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-03-security.png"
+                  src="/assets/bento_grid2.png"
                   className="h-[min(152px,40cqw)] object-cover"
                 />
               </div>
@@ -97,7 +97,7 @@ function BentoSection() {
                 </p>
               </div>
               <div className="relative min-h-120 w-full grow">
-                <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900/60 outline outline-white/10">
+                <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-950/100 outline outline-white/10">
                   <div className="flex bg-gray-900 outline outline-white/5">
                     <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
                       <div className="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">
@@ -108,7 +108,84 @@ function BentoSection() {
                       </div>
                     </div>
                   </div>
-                  <div className="px-6 pt-6 pb-14">Code Here</div>
+                  <div className="px-6 pt-6 pb-14">
+                    <div className="px-6 pt-6 pb-14 font-mono text-[13px] leading-relaxed overflow-hidden">
+                      <pre className="whitespace-pre-wrap break-words text-slate-200">
+                        <code>
+                          <span className="text-orange-400">type</span>{" "}
+                          <span className="text-sky-400">ThumbnailRequest</span>{" "}
+                          <span className="text-slate-300">=</span>{" "}
+                          <span className="text-slate-300">{`{`}</span>
+                          {"\n  "}
+                          <span className="text-slate-200">image:</span>{" "}
+                          <span className="text-emerald-400">File</span>;
+                          {"\n  "}
+                          <span className="text-slate-200">title:</span>{" "}
+                          <span className="text-emerald-400">string</span>;
+                          {"\n  "}
+                          <span className="text-slate-200">style?</span>
+                          <span className="text-slate-300">:</span>{" "}
+                          <span className="text-emerald-400">"bold"</span>{" "}
+                          <span className="text-slate-300">|</span>{" "}
+                          <span className="text-emerald-400">"minimal"</span>;
+                          {"\n"}
+                          <span className="text-slate-300">{`}`}</span>
+                          {"\n\n"}
+                          <span className="text-orange-400">
+                            export async function
+                          </span>{" "}
+                          <span className="text-sky-400">
+                            generateThumbnail
+                          </span>
+                          <span className="text-slate-300">(</span>
+                          <span className="text-slate-200">payload:</span>{" "}
+                          <span className="text-sky-400">ThumbnailRequest</span>
+                          <span className="text-slate-300">)</span>{" "}
+                          <span className="text-orange-400">:</span>{" "}
+                          <span className="text-emerald-400">
+                            Promise&lt;string&gt;
+                          </span>{" "}
+                          <span className="text-slate-300">{`{`}</span>
+                          {"\n  "}
+                          <span className="text-orange-400">const</span>{" "}
+                          <span className="text-slate-200">response</span>{" "}
+                          <span className="text-slate-300">= await</span>{" "}
+                          <span className="text-sky-400">fetch</span>
+                          <span className="text-slate-300">(</span>
+                          <span className="text-amber-300">
+                            "/api/thumbnails"
+                          </span>
+                          <span className="text-slate-300">,</span>{" "}
+                          <span className="text-slate-300">{`{`}</span>
+                          {"\n    "}
+                          <span className="text-slate-200">method:</span>{" "}
+                          <span className="text-amber-300">"POST"</span>
+                          <span className="text-slate-300">,</span>
+                          {"\n    "}
+                          <span className="text-slate-200">body:</span>{" "}
+                          <span className="text-sky-400">JSON.stringify</span>
+                          <span className="text-slate-300">(payload),</span>
+                          {"\n  "}
+                          <span className="text-slate-300">{`}`}</span>
+                          <span className="text-slate-300">);</span>
+                          {"\n\n  "}
+                          <span className="text-orange-400">return</span>{" "}
+                          <span className="text-slate-200">
+                            response.json()
+                          </span>
+                          <span className="text-slate-300">.</span>
+                          <span className="text-sky-400">then</span>
+                          <span className="text-slate-300">(</span>
+                          <span className="text-slate-200">r</span>{" "}
+                          <span className="text-slate-300">=&gt;</span>{" "}
+                          <span className="text-slate-200">r.url</span>
+                          <span className="text-slate-300">);</span>
+                          {"\n"}
+                          <span className="text-slate-300">{`}`}</span>
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
