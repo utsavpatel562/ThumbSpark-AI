@@ -40,7 +40,7 @@ export default function Navbar() {
         </div>
 
         <button className="hidden md:block px-6 py-2.5 bg-orange-500 hover:bg-orange-600 active:scale-95 transition-all rounded-full">
-          Start free trial
+          Get started
         </button>
         <button onClick={() => setIsOpen(true)} className="md:hidden">
           <MenuIcon size={26} className="active:scale-90 transition" />

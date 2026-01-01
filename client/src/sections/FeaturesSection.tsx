@@ -71,8 +71,8 @@ export default function FeaturesSection() {
             }}
           >
             <img
-              className="h-full w-auto"
-              src="/assets/features-showcase-1.png"
+              className="h-full w-auto rounded-2xl border border-orange-400"
+              src="/assets/feature2.png"
               alt="features showcase"
               width={1000}
               height={500}
@@ -91,13 +91,21 @@ export default function FeaturesSection() {
               mass: 1,
             }}
           >
-            <img
-              src="/assets/features-showcase-2.png"
-              alt="features showcase"
-              width={1000}
-              height={500}
-              className="hover:-translate-y-0.5 transition duration-300"
-            />
+            <div
+              className="rounded-2xl overflow-hidden border border-orange-400"
+              style={{
+                background:
+                  "radial-gradient(125% 125% at 55% 20%, #000 40%, #f76d1e 90%)",
+              }}
+            >
+              <img
+                src="/assets/feature.png"
+                alt="features showcase"
+                width={1000}
+                height={500}
+                className="hover:-translate-y-0.5 transition duration-300 rounded-3xl translate-x-[12%] translate-y-[12%]"
+              />
+            </div>
             <h3 className="text-[24px]/7.5 text-slate-300 font-medium mt-6">
               Design smarter and turn thumbnails into views{" "}
             </h3>

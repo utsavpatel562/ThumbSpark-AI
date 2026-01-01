@@ -5,10 +5,10 @@ function BentoSection() {
         className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 py-8 rounded-4xl"
         style={{
           background:
-            "radial-gradient(125% 125% at 50% 20%, #000 40%, #ff792b 110%)",
+            "radial-gradient(125% 125% at 50% 20%, #000 40%, #f76d1e 110%)",
         }}
       >
-        <p className="mx-auto mb-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-orange-500 sm:text-5xl">
+        <p className="mx-auto mb-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-orange-400 sm:text-5xl">
           Built for speed, scale, and creators
         </p>
         <h2 className="text-center text-base/7 font-semibold text-slate-200">
@@ -32,7 +32,7 @@ function BentoSection() {
                 <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 outline outline-white/20">
                   <img
                     alt=""
-                    src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-mobile-friendly.png"
+                    src="/assets/grid_imgg.png"
                     className="size-full object-cover object-top"
                   />
                 </div>
@@ -55,7 +55,7 @@ function BentoSection() {
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-03-performance.png"
+                  src="/assets/grid_img2.png"
                   className="w-full max-lg:max-w-xs"
                 />
               </div>
@@ -108,9 +108,7 @@ function BentoSection() {
                       </div>
                     </div>
                   </div>
-                  <div className="px-6 pt-6 pb-14">
-                    {/* Your code example */}
-                  </div>
+                  <div className="px-6 pt-6 pb-14">Code Here</div>
                 </div>
               </div>
             </div>
