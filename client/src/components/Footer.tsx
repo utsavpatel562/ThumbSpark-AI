@@ -8,6 +8,7 @@ export default function Footer() {
   return (
     <footer
       className="
+      overflow-x-hidden
       flex flex-col md:flex-row
       justify-center md:justify-between
       gap-12 md:gap-20

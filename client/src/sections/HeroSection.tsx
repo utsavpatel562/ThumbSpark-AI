@@ -15,8 +15,8 @@ export default function HeroSection() {
   return (
     <>
       <div
-        className="relative overflow-hidden bg-[#060010]
-                 min-h-screen md:min-h-[140vh]"
+        className="relative overflow-x-hidden overflow-y-hidden bg-[#060010]
+             min-h-screen md:min-h-[140vh] max-w-[100vw]"
       >
         {/* Laser background (hidden on mobile) */}
         <div className="hidden md:block">

@@ -25,6 +25,7 @@ export default function ContactSection() {
           <div className="flex items-center pl-3 rounded-lg border border-slate-700 focus-within:border-orange-500">
             <UserIcon className="size-5" />
             <input
+              autoComplete="off"
               name="name"
               type="text"
               placeholder="Enter your name"
@@ -43,6 +44,7 @@ export default function ContactSection() {
           <div className="flex items-center pl-3 rounded-lg border border-slate-700 focus-within:border-orange-500">
             <MailIcon className="size-5" />
             <input
+              autoComplete="off"
               name="email"
               type="email"
               placeholder="Enter your email"
@@ -60,6 +62,7 @@ export default function ContactSection() {
         >
           <p className="mb-2 font-medium">Message</p>
           <textarea
+            autoComplete="off"
             name="message"
             rows={8}
             placeholder="Enter your message"
