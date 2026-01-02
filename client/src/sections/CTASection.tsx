@@ -1,10 +1,12 @@
 "use client";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 export default function CTASection() {
+  const navigate = useNavigate();
   return (
     <motion.div
-      className="max-w-5xl py-16 mt-40 md:pl-20 md:w-full max-md:mx-4 md:mx-auto flex flex-col md:flex-row max-md:gap-6 items-center justify-between text-left bg-linear-to-b from-orange-900 to-orange-950 rounded-2xl p-6 text-white"
+      className="max-w-5xl py-16 mt-30 mb-30 md:pl-20 md:w-full max-md:mx-4 md:mx-auto flex flex-col md:flex-row max-md:gap-6 items-center justify-between text-left bg-linear-to-b from-orange-900 to-orange-950 rounded-2xl p-6 text-white"
       initial={{ y: 150, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
@@ -36,6 +38,7 @@ export default function CTASection() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
+        onClick={() => navigate("/generate")}
       >
         Generate Free Thumbnail
       </motion.button>

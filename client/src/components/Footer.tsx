@@ -1,52 +1,74 @@
 import { footerData } from "../data/footer";
-import {
-  DribbbleIcon,
-  LinkedinIcon,
-  TwitterIcon,
-  YoutubeIcon,
-} from "lucide-react";
+import { GithubIcon, InstagramIcon, LinkedinIcon } from "lucide-react";
 import { motion } from "motion/react";
 import type { IFooterLink } from "../types";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-wrap justify-center md:justify-between overflow-hidden gap-10 md:gap-20 mt-40 py-6 px-6 md:px-16 lg:px-24 xl:px-32 text-[13px] text-gray-500">
+    <footer
+      className="
+      flex flex-col md:flex-row
+      justify-center md:justify-between
+      gap-12 md:gap-20
+      py-8
+      px-6 md:px-16 lg:px-24 xl:px-32
+      text-[13px] text-gray-500 bg-zinc-900
+    "
+    >
+      {/* LEFT SECTION */}
       <motion.div
-        className="flex flex-wrap items-start gap-10 md:gap-35"
+        className="
+          flex flex-col md:flex-row
+          items-center md:items-start
+          gap-10 md:gap-35
+          text-center md:text-left
+        "
         initial={{ x: -150, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
       >
-        <a href="#">
+        <Link to="/">
           <img
-            className=""
             src="/assets/logo.png"
             alt="footer logo"
-            width={140}
+            width={160}
+            className="mx-auto md:mx-0"
           />
-        </a>
-        {footerData.map((section, index) => (
-          <div key={index}>
-            <p className="text-slate-100 font-semibold">{section.title}</p>
-            <ul className="mt-2 space-y-2">
-              {section.links.map((link: IFooterLink, index: number) => (
-                <li key={index}>
-                  <Link
-                    to={link.href}
-                    className="hover:text-orange-600 transition"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        </Link>
+
+        <div className="flex flex-col sm:flex-row gap-10">
+          {footerData.map((section, index) => (
+            <div key={index}>
+              <p className="text-slate-100 font-semibold text-lg">
+                {section.title}
+              </p>
+              <ul className="mt-2 space-y-2 text-lg md:text-sm">
+                {section.links.map((link: IFooterLink, index: number) => (
+                  <li key={index}>
+                    <Link
+                      to={link.href}
+                      className="hover:text-orange-600 transition"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </motion.div>
+
+      {/* RIGHT SECTION */}
       <motion.div
-        className="flex flex-col max-md:items-center max-md:text-center gap-2 items-end"
+        className="
+          flex flex-col
+          items-center md:items-end
+          text-center md:text-right
+          gap-2
+        "
         initial={{ x: 150, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -55,35 +77,39 @@ export default function Footer() {
         <p className="max-w-60">
           Making every customer feel valued no matter the size of your audience.
         </p>
+
         <div className="flex items-center gap-4 mt-3">
           <a
-            href="https://dribbble.com/prebuiltui"
+            href="https://github.com/utsavpatel562"
             target="_blank"
             rel="noreferrer"
           >
-            <DribbbleIcon className="size-5 hover:text-orange-500" />
+            <GithubIcon className="size-5 hover:text-orange-500" />
           </a>
           <a
-            href="https://www.linkedin.com/company/prebuiltui"
+            href="https://www.linkedin.com/in/utsav-patel-coder"
             target="_blank"
             rel="noreferrer"
           >
             <LinkedinIcon className="size-5 hover:text-orange-500" />
           </a>
-          <a href="https://x.com/prebuiltui" target="_blank" rel="noreferrer">
-            <TwitterIcon className="size-5 hover:text-orange-500" />
-          </a>
           <a
-            href="https://www.youtube.com/@prebuiltui"
+            href="https://instagram.com/utsavpatel_01"
             target="_blank"
             rel="noreferrer"
           >
-            <YoutubeIcon className="size-6 hover:text-orange-500" />
+            <InstagramIcon className="size-5 hover:text-orange-500" />
           </a>
         </div>
-        <p className="mt-3 text-center">
+
+        <p className="mt-4">
           &copy; {new Date().getFullYear()}{" "}
-          <a href="https://prebuiltui.com?utm_source=pixels">Thumbspark-ai</a>
+          <a
+            href="https://prebuiltui.com?utm_source=pixels"
+            className="hover:text-orange-500"
+          >
+            Thumbspark-ai
+          </a>
         </p>
       </motion.div>
     </footer>

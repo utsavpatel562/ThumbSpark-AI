@@ -1,0 +1,85 @@
+import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
+const About = () => {
+  const navigate = useNavigate();
+  return (
+    <>
+      <div className="overflow-hidden py-24 sm:py-32">
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <svg
+            aria-hidden="true"
+            className="absolute top-0 left-[max(50%,25rem)] h-256 w-512 -translate-x-1/2 mask-[radial-gradient(64rem_64rem_at_top,white,transparent)] stroke-orange-800"
+          >
+            <defs>
+              <pattern
+                x="50%"
+                y={-1}
+                id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+                width={200}
+                height={200}
+                patternUnits="userSpaceOnUse"
+              >
+                <path d="M100 200V.5M.5 .5H200" fill="none" />
+              </pattern>
+            </defs>
+            <svg x="50%" y={-1} className="overflow-visible fill-orange-800/50">
+              <path
+                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                strokeWidth={0}
+              />
+            </svg>
+            <rect
+              fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"
+              width="100%"
+              height="100%"
+              strokeWidth={0}
+            />
+          </svg>
+        </div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div className="lg:pt-4 lg:pr-8">
+              <div className="lg:max-w-lg">
+                <h2 className="text-base/7 font-semibold text-orange-400">
+                  About Us
+                </h2>
+                <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">
+                  Redefining how creators design thumbnails
+                </p>
+                <p className="mt-6 text-lg/8 text-gray-300">
+                  We believe great content deserves to be seen. Our platform
+                  helps creators design thumbnails that capture attention and
+                  scale effortlessly.
+                </p>
+                <p className="mt-6 text-lg/8 text-gray-300">
+                  Built for speed and consistency, our platform helps creators
+                  publish faster without sacrificing quality.
+                </p>
+              </div>
+              <motion.div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+                <button
+                  onClick={() => navigate("/generate")}
+                  className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-7 h-11 w-full sm:w-auto"
+                >
+                  Create your free thumbnail
+                </button>
+                <button className="flex items-center gap-2 border-2 border-orange-900 hover:bg-orange-950 rounded-full px-6 h-11 w-full sm:w-auto justify-center">
+                  <span>Learn More</span>
+                </button>
+              </motion.div>
+            </div>
+            <img
+              alt="Product screenshot"
+              src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+              width={2432}
+              height={1442}
+              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default About;

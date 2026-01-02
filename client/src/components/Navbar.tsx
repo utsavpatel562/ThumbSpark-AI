@@ -1,12 +1,11 @@
 import { MenuIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 import { motion } from "motion/react";
-import { navlinks } from "../data/navlinks";
-import type { INavLink } from "../types";
-import { NavLink } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -17,7 +16,7 @@ export default function Navbar() {
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
       >
-        <a href="#">
+        <a href="/">
           <img
             className="h-8.5 w-auto"
             src="/assets/logo.png"
@@ -28,18 +27,27 @@ export default function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-8 transition duration-500">
-          {navlinks.map((link: INavLink) => (
-            <NavLink
-              key={link.name}
-              to={link.href}
-              className="transition hover:font-semibold"
-            >
-              {link.name}
-            </NavLink>
-          ))}
+          <Link to={"/"} className="transition hover:font-semibold">
+            Home
+          </Link>
+          <Link to={"/generate"} className="transition hover:font-semibold">
+            Generate
+          </Link>
+          <Link
+            to={"/my-generation"}
+            className="transition hover:font-semibold"
+          >
+            My Generations
+          </Link>
+          <Link to={"/my-contact"} className="transition hover:font-semibold">
+            My Contact
+          </Link>
         </div>
 
-        <button className="hidden md:block px-6 py-2.5 bg-orange-500 hover:bg-orange-600 active:scale-95 transition-all rounded-full">
+        <button
+          onClick={() => navigate("/login")}
+          className="hidden md:block px-6 py-2.5 bg-orange-500 hover:bg-orange-600 active:scale-95 transition-all rounded-full"
+        >
           Get started
         </button>
         <button onClick={() => setIsOpen(true)} className="md:hidden">
@@ -52,15 +60,21 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {navlinks.map((link: INavLink) => (
-          <NavLink
-            key={link.name}
-            to={link.href}
-            onClick={() => setIsOpen(false)}
-          >
-            {link.name}
-          </NavLink>
-        ))}
+        <Link onClick={() => setIsOpen(false)} to={"/"}>
+          Home
+        </Link>
+        <Link onClick={() => setIsOpen(false)} to={"/generate"}>
+          Generate
+        </Link>
+        <Link onClick={() => setIsOpen(false)} to={"/my-generation"}>
+          My Generations
+        </Link>
+        <Link onClick={() => setIsOpen(false)} to={"#"}>
+          My Contact
+        </Link>
+        <Link onClick={() => setIsOpen(false)} to={"/login"}>
+          Login
+        </Link>
         <button
           onClick={() => setIsOpen(false)}
           className="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-orange-500 hover:bg-orange-600 transition text-white rounded-md flex"

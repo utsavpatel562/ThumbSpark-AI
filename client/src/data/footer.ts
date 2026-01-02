@@ -13,11 +13,10 @@ export const footerData: IFooter[] = [
     {
         title: "Resources",
         links: [
-            { name: "Company", href: "#company" },
-            { name: "Blogs", href: "#blogs" },
+            { name: "Company", href: "/about" },
             { name: "Community", href: "#community" },
             { name: "Careers", href: "#careers" },
-            { name: "About", href: "#about" },
+            { name: "About", href: "/about" },
         ]
     },
     {
