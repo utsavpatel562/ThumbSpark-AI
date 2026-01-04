@@ -1,1 +1,1 @@
-<img src="client/public/assets/demo.png"/>
+<img src="client/public/assets/demo_img.png"/>
