@@ -28,7 +28,9 @@ const Generate = () => {
 
   const [styleDropdownOpen, setStyleDropdownOpen] = useState(false);
 
-  const handleGenerate = async () => {
+  const handleGenerate = async () => {};
+
+  const fetchThumbnail = async () => {
     if (id) {
       const thumbnail: any = dummyThumbnails.find(
         (thumbnail) => thumbnail._id === id
@@ -42,8 +44,6 @@ const Generate = () => {
       setLoading(false);
     }
   };
-
-  const fetchThumbnail = async () => {};
 
   useEffect(() => {
     if (id) {
